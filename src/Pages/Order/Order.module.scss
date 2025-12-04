@@ -1,0 +1,41 @@
+.order-container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+
+  span {
+    border-bottom: 3px solid var(--blue);
+    padding-bottom: 5px;
+  }
+}
+
+.order-table {
+  text-align: center;
+
+  th {
+    background-color: var(--blue);
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  td {
+    vertical-align: middle;
+  }
+}
+
+.btn-action {
+  display: flex;
+  justify-content: center;
+
+  .btn-confirm {
+    min-width: 100px;
+    font-weight: 500;
+  }
+}

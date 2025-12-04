@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 1230px;
+    min-height: 1000px;
+    background-color: var(--light-yellow);
+}
+
+.content {
+    padding: 12px 0 0 0;
+}

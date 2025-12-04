@@ -1,0 +1,117 @@
+.table-wrapper {
+  margin-top: 20px;
+  overflow-x: auto;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Bảng chính */
+.custom-table {
+  width: 100%;
+  border-collapse: separate !important;
+  border-spacing: 0;
+  font-size: 15px;
+  color: #333;
+  min-width: 600px;
+
+  thead {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    th {
+      text-align: left;
+      padding: 14px 16px;
+      border-bottom: 2px solid #dee2e6;
+      font-size: 14px;
+    }
+  }
+
+  tbody {
+    tr {
+      transition: background-color 0.15s ease;
+
+      &:hover {
+        background-color: #f5f7fa; /* hover nhẹ hơn */
+      }
+    }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #dee2e6;
+      vertical-align: middle;
+      text-align: left;
+      font-size: 14px;
+      word-break: break-word;
+    }
+  }
+
+  .action-header,
+  .action-cell {
+    text-align: center !important;
+    width: 140px;
+
+    button {
+      margin: 2px;
+      font-size: 13px;
+      padding: 5px 10px;
+      border-radius: 6px;
+      transition: background 0.2s;
+
+      &:hover {
+        /* Chỉ đổi màu nền, bỏ scale */
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .no-data {
+    text-align: center;
+    color: #999;
+    padding: 25px 0;
+    font-style: italic;
+  }
+}
+
+/* Variant bảng */
+.light {
+  background-color: #fff;
+}
+
+.dark {
+  background-color: #343a40;
+  color: #f8f9fa;
+
+  thead {
+    background-color: #495057;
+    color: #f8f9fa;
+  }
+
+  tbody tr:hover {
+    background-color: #4e555b;
+  }
+
+  td, th {
+    color: #f8f9fa;
+  }
+}
+
+/* Responsive nhỏ */
+@media (max-width: 768px) {
+  .custom-table {
+    font-size: 13px;
+
+    .action-header,
+    .action-cell {
+      width: 120px;
+
+      button {
+        font-size: 12px;
+        padding: 4px 8px;
+      }
+    }
+  }
+}

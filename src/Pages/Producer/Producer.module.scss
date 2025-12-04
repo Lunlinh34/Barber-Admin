@@ -1,0 +1,165 @@
+.list-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    padding: 20px 0;
+
+    span {
+        border-bottom: 2px solid var(--blue);
+    }
+}
+
+.table-user {
+    text-align: center;
+}
+
+.btn-action {
+    display: flex;
+    flex-direction: column;
+
+    Button {
+        margin-top: 20px;
+    }
+}
+/* Producer.module.scss */
+
+/* Container chính */
+.container {
+  padding: 20px 40px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header danh sách nhà cung cấp */
+.list-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+  span {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 5px;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.table th, .table td {
+  text-align: center;
+  padding: 12px 15px;
+}
+
+.table th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+  background-color: #e6f0ff;
+  transition: 0.3s;
+}
+
+/* Nút hành động */
+.btn-action {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  button {
+    font-size: 0.85rem;
+    padding: 5px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  border: none;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+/* Modal Form */
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-body input,
+.modal-body select,
+.modal-body textarea {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.modal-body textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* Footer nút modal */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  button {
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .list-user {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .table th, .table td {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .btn-action {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,155 @@
+.container {
+  padding: 2rem;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+.header {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.5rem;
+}
+
+/* ================= Filter ================= */
+.filterCard {
+  background: #ffffff;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  margin-bottom: 1.5rem;
+}
+
+.controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.controlItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-weight: 500;
+  }
+
+  select {
+    min-width: 100px;
+    padding: 0.45rem 0.6rem;
+    border-radius: 0.4rem;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    transition: all 0.2s;
+
+    &:focus {
+      border-color: #2563eb;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+  }
+}
+
+.primaryBtn {
+  height: 36px;
+  padding: 0 1.25rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.3);
+  }
+}
+
+/* ================= Revenue Card ================= */
+.revenueCard {
+  background: linear-gradient(135deg, #ecfeff, #e0f2fe);
+  border: 1px solid #93c5fd;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.revenueMain {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1e40af;
+}
+
+.revenueSub {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: #374151;
+
+  strong {
+    color: #111827;
+  }
+}
+
+/* ================= Table ================= */
+.tableWrapper {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+
+  table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+
+    thead {
+      background: #f3f4f6;
+
+      th {
+        padding: 0.9rem 1rem;
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: #374151;
+        border-bottom: 1px solid #e5e7eb;
+      }
+    }
+
+    tbody tr {
+      transition: background 0.15s;
+
+      &:nth-child(even) {
+        background: #fafafa;
+      }
+
+      &:hover {
+        background: #eef2ff;
+      }
+
+      td {
+        padding: 0.85rem 1rem;
+        font-size: 0.875rem;
+        color: #1f2937;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .text-right {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.loading {
+  font-style: italic;
+  color: #6b7280;
+}

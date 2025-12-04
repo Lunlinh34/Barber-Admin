@@ -1,0 +1,73 @@
+/* Product.module.scss */
+
+.list-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; // căn trái phải
+  padding: 20px 0;
+  font-size: 2rem;
+  border-bottom: 2px solid var(--blue);
+
+  span {
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  }
+}
+
+.table-user {
+  text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  th, td {
+    padding: 12px 8px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  th {
+    background-color: var(--blue-light);
+    color: #fff;
+    font-weight: 600;
+  }
+
+  tr:nth-child(even) {
+    background-color: var(--gray-light);
+  }
+
+  tr:hover {
+    background-color: var(--blue-lightest);
+    transition: background-color 0.3s ease;
+  }
+
+  img {
+    border-radius: 8px;
+    object-fit: cover;
+  }
+}
+
+.btn-action {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  button {
+    min-width: 60px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    padding: 4px 8px;
+  }
+}

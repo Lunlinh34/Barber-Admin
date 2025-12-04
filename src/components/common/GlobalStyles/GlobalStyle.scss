@@ -1,0 +1,227 @@
+@import '@coreui/coreui/scss/coreui';
+
+//Scrollbar CSS
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+    height: 100px;
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    &:hover {
+        color: var(--black);
+    }
+}
+
+ul {
+    list-style: none;
+}
+.wrapper {
+    width: 100%;
+    @include ltr-rtl('padding-left', var(--cui-sidebar-occupy-start, 0));
+    will-change: auto;
+    @include transition(padding 0.15s);
+}
+
+.example {
+    &:not(:first-child) {
+        margin-top: 1.5rem;
+    }
+
+    .tab-content {
+        background-color: $light-50 !important;
+
+        @at-root .dark-theme & {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+        }
+    }
+
+    code[class*='language-'],
+    pre[class*='language-'] {
+        font-size: 0.875rem !important;
+    }
+
+    :not(pre) > code[class*='language-'],
+    pre[class*='language-'] {
+        background: transparent;
+    }
+
+    & + p {
+        margin-top: 1.5rem;
+    }
+
+    // Components examples
+    .preview,
+    .preview .col {
+        + p {
+            margin-top: 2rem;
+        }
+
+        > .form-control {
+            + .form-control {
+                margin-top: 0.5rem;
+            }
+        }
+
+        > .nav + .nav,
+        > .alert + .alert,
+        > .navbar + .navbar,
+        > .progress + .progress {
+            margin-top: 1rem;
+        }
+
+        > .dropdown-menu {
+            position: static;
+            display: block;
+        }
+
+        > :last-child {
+            margin-bottom: 0;
+        }
+
+        // Images
+        > svg + svg,
+        > img + img {
+            margin-left: 0.5rem;
+        }
+
+        // Buttons
+        > .btn,
+        > .btn-group {
+            margin: 0.25rem 0.125rem;
+        }
+        > .btn-toolbar + .btn-toolbar {
+            margin-top: 0.5rem;
+        }
+
+        // List groups
+        > .list-group {
+            max-width: 400px;
+        }
+
+        > [class*='list-group-horizontal'] {
+            max-width: 100%;
+        }
+
+        // Navbars
+        .fixed-top,
+        .sticky-top {
+            position: static;
+            margin: -1rem -1rem 1rem;
+        }
+
+        .fixed-bottom {
+            position: static;
+            margin: 1rem -1rem -1rem;
+        }
+
+        @include media-breakpoint-up(sm) {
+            .fixed-top,
+            .sticky-top {
+                margin: -1.5rem -1.5rem 1rem;
+            }
+            .fixed-bottom {
+                margin: 1rem -1.5rem -1.5rem;
+            }
+        }
+
+        // Pagination
+        .pagination {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+/* ===================== */
+/* Style chung cho tất cả button */
+button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  /* hover nhẹ nhàng */
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Variant mặc định */
+  &.primary {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+
+    &:hover {
+      background-color: #0069d9;
+      border-color: #0062cc;
+    }
+  }
+
+  &.success {
+    background-color: #28a745;
+    color: #fff;
+    border-color: #28a745;
+
+    &:hover {
+      background-color: #218838;
+      border-color: #1e7e34;
+    }
+  }
+
+  &.danger {
+    background-color: #dc3545;
+    color: #fff;
+    border-color: #dc3545;
+
+    &:hover {
+      background-color: #c82333;
+      border-color: #bd2130;
+    }
+  }
+
+  /* Các size */
+  &.small {
+    padding: 6px 12px;
+    font-size: 1.2rem;
+  }
+
+  &.medium {
+    padding: 8px 16px;
+    font-size: 1.4rem;
+  }
+
+  &.large {
+    padding: 10px 20px;
+    font-size: 1.6rem;
+  }
+}
